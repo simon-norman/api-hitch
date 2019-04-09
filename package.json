@@ -1,39 +1,40 @@
 {
-  "name":"api-hitch",
-  "version":"1.0.0",
-  "description":"",
-  "main":"index.js",
+  "name": "api-hitch",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
   "dependencies": {
-    "@types/mongoose":"*","mongoose":"*"
+    "@types/mongoose": "*",
+    "mongoose": "*"
   },
   "devDependencies": {
-    "@types/chai":"*",
-    "@types/mocha":"*",
-    "@types/sinon-chai":"*",
-    "@typescript-eslint/eslint-plugin":"*",
-    "@typescript-eslint/parser":"*",
-    "chai":"*",
-    "eslint":"*",
-    "eslint-config-airbnb-base":"*",
-    "eslint-plugin-chai-friendly":"*",
-    "eslint-plugin-import":"*",
-    "eslint-plugin-mocha":"*",
-    "mocha":"*",
-    "nyc":"*",
-    "sinon":"*",
-    "sinon-chai":"*",
-    "supertest":"*",
-    "ts-node":"*",
-    "typescript":"*"
+    "@types/chai": "*",
+    "@types/mocha": "*",
+    "@types/sinon-chai": "*",
+    "@typescript-eslint/eslint-plugin": "*",
+    "@typescript-eslint/parser": "*",
+    "chai": "*",
+    "eslint": "*",
+    "eslint-config-airbnb-base": "*",
+    "eslint-plugin-chai-friendly": "*",
+    "eslint-plugin-import": "*",
+    "eslint-plugin-mocha": "*",
+    "mocha": "*",
+    "nyc": "*",
+    "sinon": "*",
+    "sinon-chai": "*",
+    "supertest": "*",
+    "ts-node": "*",
+    "typescript": "*"
   },
   "repository": {
-    "type":"git",
-    "url":"git+https://github.com/simon-norman/api-hitch.git"
+    "type": "git",
+    "url": "git+https://github.com/simon-norman/api-hitch.git"
   },
-  "author":"Simon Norman",
-  "license":"UNLICENSED",
+  "author": "Simon Norman",
+  "license": "UNLICENSED",
   "bugs": {
-    "url":"https://github.com/simon-norman/api-hitch/issues"
+    "url": "https://github.com/simon-norman/api-hitch/issues"
   },
-  "homepage":"https://github.com/simon-norman/api-hitch#readme"
+  "homepage": "https://github.com/simon-norman/api-hitch#readme"
 }
