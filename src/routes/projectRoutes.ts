@@ -1,7 +1,7 @@
-import express = require('express');
+import KoaRouter = require('koa-router');
 
 const createProjectRoutes = (projectController): any => {
-  const router = express.Router();
+  const router = new KoaRouter();
 
   router.post('/project', projectController.saveProject);
 

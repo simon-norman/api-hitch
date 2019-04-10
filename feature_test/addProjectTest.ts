@@ -1,7 +1,7 @@
 /* eslint-disable @typescript-eslint/explicit-function-return-type */
 import { expect } from 'chai';
 import request = require('supertest');
-import createHitchApi from '../src/server';
+import createHitchApi from '../src/createApp';
 import Project from '../src/models/projectModel';
 
 describe('Add project', function () {
@@ -22,6 +22,6 @@ describe('Add project', function () {
       .send(newProject);
 
     const allSavedProjects = await Project.find({}, '', { lean: true });
-    expect(allSavedProjects[0].name).equals(newProject.name);
+    expect(allSavedProjects[0]).equals(newProject.name);
   });
 });

@@ -1,3 +1,3 @@
-import createHitchApi from './server';
+import createHitchApi from './createApp';
 
 createHitchApi();

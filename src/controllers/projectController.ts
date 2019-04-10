@@ -9,19 +9,12 @@ export default class ProjectController {
     this.Project = Project;
   }
 
-  saveProject = async (request, response, next): Promise<void> => {
-    try {
-      const project = request.body;
-      const savedProject = await this.Project.create(project);
+  saveProject = async (ctx, next): Promise<void> => {
+    const project = ctx.body;
+    const savedProject = await this.Project.create(project);
 
-      response.status(200).json(savedProject);
-    } catch (error) {
-      if (error.name === 'ValidationError') {
-        error.status = 422;
-        next(error);
-      } else {
-        next(error);
-      }
-    }
+    ctx.status = 200;
+    ctx.body = savedProject;
+    await next();
   }
 }
