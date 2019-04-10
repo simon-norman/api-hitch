@@ -8,8 +8,8 @@ describe('Add project', function () {
   let newProject;
   let hitchApi;
 
-  before(() => {
-    hitchApi = createHitchApi();
+  before(async () => {
+    hitchApi = await createHitchApi();
   });
 
   beforeEach(() => {
@@ -17,11 +17,14 @@ describe('Add project', function () {
   });
 
   it('should add a project to the database with a project name', async function () {
-    request(hitchApi)
+    console.log('stuff');
+    await request(hitchApi)
       .post('/project')
-      .send(newProject);
+      .send(newProject)
+      .set('Content-Type', 'application/json')
+      .set('Accept', 'application/json');
 
     const allSavedProjects = await Project.find({}, '', { lean: true });
-    expect(allSavedProjects[0]).equals(newProject.name);
+    expect(allSavedProjects[0].name).equals(newProject.name);
   });
 });

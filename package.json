@@ -4,16 +4,19 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start-mongo": "start mongod"
+    "start-mongo": "start mongod",
+    "app": "ts-node src/app"
   },
   "dependencies": {
     "@types/cors": "^2.8.4",
     "@types/koa": "^2.0.48",
+    "@types/koa-bodyparser": "^4.2.2",
     "@types/koa-cors": "0.0.0",
     "@types/koa-router": "^7.0.40",
     "@types/mongoose": "*",
-    "cors": "^2.8.5",
     "koa": "^2.7.0",
+    "koa-body": "^4.1.0",
+    "koa-bodyparser": "^4.2.1",
     "koa-cors": "0.0.16",
     "koa-router": "^7.4.0",
     "mongoose": "*"

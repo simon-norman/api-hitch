@@ -10,7 +10,7 @@ export default class ProjectController {
   }
 
   saveProject = async (ctx, next): Promise<void> => {
-    const project = ctx.body;
+    const project = ctx.request.body;
     const savedProject = await this.Project.create(project);
 
     ctx.status = 200;
