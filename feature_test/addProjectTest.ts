@@ -23,8 +23,6 @@ describe('Add project', function () {
 
   beforeEach(async () => {
     await ensureProjectCollectionEmpty();
-
-    newProject = { name: 'Brand reorg' };
   });
 
   after(async () => {
@@ -37,12 +35,11 @@ describe('Add project', function () {
     let response;
     let savedProject;
 
-    beforeEach(async () => {
+    before(async () => {
+      newProject = { name: 'Brand reorg' };
       response = await request(hitchApi)
         .post('/project')
-        .send(newProject)
-        .set('Content-Type', 'application/json')
-        .set('Accept', 'application/json');
+        .send(newProject);
 
       const allSavedProjects = await Project.find({}, '', { lean: true });
       savedProject = allSavedProjects[0];
@@ -55,9 +52,16 @@ describe('Add project', function () {
     it('should return the new saved project with a generated id', async function () {
       expect(savedProject._id.toString()).equals(response.body._id);
     });
+  });
 
+  describe('When invalid new project is posted to the api', function () {
     it('should, if no name provided, return a status of 422 and an error', async function () {
+      const response = await request(hitchApi)
+        .post('/project')
+        .send({ name: '' });
+
       expect(response.status).equals(422);
+      expect(response.text).equals('project validation failed: name: Path `name` is required.');
     });
   });
 });
