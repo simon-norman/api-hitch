@@ -18,7 +18,7 @@ module.exports = {
     "@typescript-eslint/no-unused-vars": ["error", { "argsIgnorePattern": "next" }],
     "import/no-extraneous-dependencies": [2, { devDependencies: true }],
     "chai-friendly/no-unused-expressions": 2,
-    "linebreak-style": ["error", "windows"],
+    "linebreak-style": 0,
     "no-unused-expressions": 0,
     "prefer-arrow-callback": 0,
     "mocha/prefer-arrow-callback": 2,

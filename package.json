@@ -4,8 +4,10 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start-mongo": "start mongod",
-    "app": "ts-node src/app"
+    "windows-start-mongo": "start mongod",
+    "mac-start-mongo": "mongod",
+    "app": "ts-node src/app",
+    "test": "mocha --timeout 999999 --colors --require ts-node/register './{,!(node_modules)/**/}*Test.ts'"
   },
   "dependencies": {
     "@types/cors": "^2.8.4",
