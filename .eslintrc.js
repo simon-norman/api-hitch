@@ -21,6 +21,7 @@ module.exports = {
     "linebreak-style": 0,
     "no-unused-expressions": 0,
     "prefer-arrow-callback": 0,
+    "prefer-destructuring": ["error", {"object": true, "array": false}],
     "mocha/prefer-arrow-callback": 2,
     "func-names": 0,
     "import/first": 0,
